@@ -8,11 +8,14 @@ const AllocationForm = (props) => {
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+    // added code
+    const [curr, setCurr] = useState('');
+    // end added code
 
     const submitEvent = () => {
 
             if(cost > remaining) {
-                alert("The value cannot exceed remaining funds  £"+remaining);
+                alert("The value cannot exceed remaining funds  " +curr+remaining);
                 setCost("");
                 return;
             }
